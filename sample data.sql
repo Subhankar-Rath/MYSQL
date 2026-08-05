@@ -38,3 +38,31 @@ INSERT INTO student1(name) VALUES ("subhankar"),("jyoti");
 
 SELECT * FROM student1;
 
+SELECT * FROM student WHERE marks>80;
+
+SELECT * FROM student WHERE marks>80 AND city="Mumbai";
+
+SELECT * FROM student WHERE grade='c';
+SELECT * FROM student WHERE grade<'c';
+SELECT * FROM student WHERE marks BETWEEN 80 AND 90;
+SELECT * FROM student WHERE city IN("mumbai","bbsr");
+SELECT * FROM student WHERE city NOT IN("mumbai","bbsr");
+SELECT * FROM student WHERE marks>70 LIMIT 3;
+
+SELECT * FROM student ORDER BY CITY ASC;
+SELECT * FROM student  ORDER BY marks DESC LIMIT 3;
+
+SELECT MAX(MARKS) FROM STUDENT;
+SELECT MIN(MARKS) FROM STUDENT;
+SELECT AVG(MARKS) FROM STUDENT;
+SELECT COUNT(ID) FROM STUDENT;
+SELECT SUM(ID) FROM STUDENT;
+
+SELECT city,count(name) FROM student GROUP BY city;
+SELECT city,name,count(marks) FROM student GROUP BY name,city;
+SELECT city,AVG(MARKS) FROM student GROUP BY city;
+
+SELECT city,AVG(marks) FROM student GROUP BY city ORDER BY city;
+
+SELECT grade,count(id) FROM student GROUP BY grade;
+
