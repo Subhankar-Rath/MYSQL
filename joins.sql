@@ -45,3 +45,9 @@ UNION
 SELECT * FROM STUDENT AS S 
 RIGHT JOIN COURSE AS C 
 ON S.STUDENT_ID=C.STUDENT_ID;
+
+select * from student as a left join course as b on a.student_id=b.student_id
+where b.student_id is null;
+
+select * from student as a right join course as b on a.student_id=b.student_id
+where a.student_id is null;
